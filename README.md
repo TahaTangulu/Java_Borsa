@@ -28,6 +28,10 @@ String query = "select *  from tabloadı;";
 ```
 > Bu kısımda istediğimiz tüm sorgulamaları yapabiliriz.
 
+Projemizin çalıştığında aldığımız çıktı:
+
+![çıktı](Screenshot_1.png)
+> Şuan için böyle ilerde geliştirilecek.
 
 
 
