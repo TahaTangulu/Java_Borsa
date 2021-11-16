@@ -1,4 +1,4 @@
-# Veri Tabanı Sistemleri Proje
+# **Veri Tabanı Sistemleri Proje**
 ## Java ile SQL Sorgulama
 
 Proje Konusu:
@@ -8,7 +8,7 @@ Açıklamalar:
 
 Projemizin çalışması için gerekli olan `MySQL JDBC connector` java kütüphanemize eklememiz gerekmetedir. src kısmında `mysql-connector-java-5.1.18-bin.jar` adı altıdna bulunmaktadır.
 
-Gerekli importlar:
+**Gerekli importlar:**
 ```java
 import  java.sql.Connection;		
 import  java.sql.Statement;		
@@ -17,7 +17,7 @@ import  java.sql.DriverManager;
 import  java.sql.SQLException;
 ```
 
-Database bağlantısı için:
+**Database bağlantısı için:**
 
 Bağlantı için yazış şekili:
 ```java
