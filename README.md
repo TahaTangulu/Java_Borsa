@@ -24,7 +24,7 @@ String password = "Parola";
 ```
 Çalıştırılacak sorgular için:
 ```java
-String query = "select *  from ogrenci;";
+String query = "select *  from tabloadı;";
 ```
 > Bu kısımda istediğimiz tüm sorgulamaları yapabiliriz.
 
