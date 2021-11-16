@@ -12,7 +12,7 @@ import  java.sql.SQLException;
 public class  javasql {				
     	public static void  main(String[] args) throws  ClassNotFoundException, SQLException {	
     		
-				// Baglantı için yazış şekili: "jdbc:mysql://ipaddress:portnumber/db_name"		
+				// Baglantı için yazış şekili: "jdbc:mysql://ipadresi:port/database_adı"		
                 String dbUrl = "jdbc:mysql://localhost:3306/javasql";					
 
 				// Database Kullanıcı adı		
