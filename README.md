@@ -8,7 +8,7 @@ Açıklamalar:
 
 Projemizin çalışması için gerekli olan `MySQL JDBC connector` java kütüphanemize eklememiz gerekmetedir. src kısmında `mysql-connector-java-5.1.18-bin.jar` adı altıdna bulunmaktadır.
 
-##Güncelleme
+## Güncelleme
 
 - Arayüz eklendi.
 - Arayüz üzerinden `SELECT`,`UPDATE`,`INSERT` ve `DELETE` gibi komutları yapabiliyoruz.
