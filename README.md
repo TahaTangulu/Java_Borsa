@@ -8,7 +8,14 @@ Açıklamalar:
 
 Projemizin çalışması için gerekli olan `MySQL JDBC connector` java kütüphanemize eklememiz gerekmetedir. src kısmında `mysql-connector-java-5.1.18-bin.jar` adı altıdna bulunmaktadır.
 
-**Gerekli importlar:**
+##Güncelleme
+
+- Arayüz eklendi.
+- Arayüz üzerinden `SELECT`,`UPDATE`,`INSERT` ve `DELETE` gibi komutları yapabiliyoruz.
+
+- Gelecek güncellemede siteden veri çekme eklenecek.
+
+**Bağlantı İçin Gerekli importlar:**
 ```java
 import  java.sql.Connection;		
 import  java.sql.Statement;		
@@ -39,8 +46,8 @@ String query = "select *  from tabloadı;";
 
 Projemizin çalıştığında aldığımız çıktı:
 
-![çıktı](Screenshot_1.png)
-> Şuan için böyle ilerde geliştirilecek.
+![çıktı](Screenshot_2.png)
+> Şuan için böyle ilerde geliştirilecek ve siteden veri çekme eklenecek.
 
 
 
