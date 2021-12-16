@@ -58,5 +58,8 @@ Projemizin çalıştığında aldığımız çıktı:
 ![çıktı](Screenshot_2.png)
 > Şuan için böyle ilerde geliştirilecek ve siteden veri çekme eklenecek.
 
+![çıktı2](Screenshoot_3.png)
+> Çekilen veri database kayıt çıktısı.
+
 
 
