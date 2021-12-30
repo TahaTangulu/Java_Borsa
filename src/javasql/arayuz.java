@@ -118,12 +118,12 @@ public class arayuz extends JFrame {
 		txt_Alis.setColumns(10);
 
 		txt_Satis = new JTextField();
-		txt_Satis.setBounds(550, 89, 116, 20);
+		txt_Satis.setBounds(550, 90, 116, 20);
 		contentPane.add(txt_Satis);
 		txt_Satis.setColumns(10);
 
 		txt_Artis = new JTextField();
-		txt_Artis.setBounds(550, 124, 116, 20);
+		txt_Artis.setBounds(550, 126, 116, 20);
 		contentPane.add(txt_Artis);
 		txt_Artis.setColumns(10);
 		
@@ -138,13 +138,13 @@ public class arayuz extends JFrame {
 		txt_Saat.setColumns(10);
 		
 		txt_Tarih = new JTextField();
-		txt_Tarih.setBounds(550, 158, 116, 20);
+		txt_Tarih.setBounds(550, 161, 116, 20);
 		contentPane.add(txt_Tarih);
 		txt_Tarih.setColumns(10);
 		
 
 		txt_Saat = new JTextField();
-		txt_Saat.setBounds(550, 189, 116, 20);
+		txt_Saat.setBounds(550, 197, 116, 20);
 		contentPane.add(txt_Saat);
 		txt_Saat.setColumns(10);
 
@@ -172,7 +172,7 @@ public class arayuz extends JFrame {
 
 			}
 		});
-		btnKaydet.setBounds(485, 232, 83, 25);
+		btnKaydet.setBounds(484, 232, 83, 25);
 		contentPane.add(btnKaydet);
 
 		JLabel lblBirim = new JLabel("Birim");
@@ -184,19 +184,19 @@ public class arayuz extends JFrame {
 		contentPane.add(lblSoyad);
 
 		JLabel lblYas = new JLabel("Satış");
-		lblYas.setBounds(484, 91, 56, 16);
+		lblYas.setBounds(484, 92, 56, 16);
 		contentPane.add(lblYas);
 
 		JLabel lblNumara = new JLabel("Artış");
-		lblNumara.setBounds(484, 126, 56, 16);
+		lblNumara.setBounds(484, 128, 56, 16);
 		contentPane.add(lblNumara);
 		
 		JLabel lblTarih = new JLabel("Tarih");
-		lblTarih.setBounds(484, 161, 46, 14);
+		lblTarih.setBounds(484, 164, 46, 14);
 		contentPane.add(lblTarih);
 		
 		JLabel lblSaat = new JLabel("Saat");
-		lblSaat.setBounds(484, 192, 46, 14);
+		lblSaat.setBounds(484, 200, 46, 14);
 		contentPane.add(lblSaat);
 
 		JButton btnUpdate = new JButton("Güncelle");
