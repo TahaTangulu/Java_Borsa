@@ -31,7 +31,7 @@ public class arayuz extends JFrame {
 
 	DefaultTableModel model = new DefaultTableModel();
 
-	Object[] kolonlar = { "Birim", "Alış", "Satış", "Durum", "Tarih" ,"Saat"};
+	Object[] kolonlar = { "Birim", "AlÃ½Ã¾", "SatÃ½Ã¾", "Durum", "Tarih" ,"Saat"};
 	Object[] satirlar = new Object[6];
 	private JTextField txt_Birim;
 	private JTextField txt_Alis;
@@ -179,15 +179,15 @@ public class arayuz extends JFrame {
 		lblBirim.setBounds(484, 20, 56, 16);
 		contentPane.add(lblBirim);
 
-		JLabel lblSoyad = new JLabel("Alış");
+		JLabel lblSoyad = new JLabel("AlÃ½Ã¾");
 		lblSoyad.setBounds(484, 56, 56, 16);
 		contentPane.add(lblSoyad);
 
-		JLabel lblYas = new JLabel("Satış");
+		JLabel lblYas = new JLabel("SatÃ½Ã¾");
 		lblYas.setBounds(484, 91, 56, 16);
 		contentPane.add(lblYas);
 
-		JLabel lblNumara = new JLabel("Artış");
+		JLabel lblNumara = new JLabel("ArtÃ½Ã¾");
 		lblNumara.setBounds(484, 126, 56, 16);
 		contentPane.add(lblNumara);
 		
@@ -199,7 +199,7 @@ public class arayuz extends JFrame {
 		lblSaat.setBounds(484, 192, 46, 14);
 		contentPane.add(lblSaat);
 
-		JButton btnUpdate = new JButton("Güncelle");
+		JButton btnUpdate = new JButton("GÃ¼ncelle");
 		btnUpdate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
@@ -253,7 +253,7 @@ public class arayuz extends JFrame {
 		contentPane.add(lblrenciAd);
 
 		JComboBox comboBox = new JComboBox();
-		comboBox.setModel(new DefaultComboBoxModel(new String[] { "Birim", "Alış", "Satış", "Artış" ,"Tarih","Saat" }));
+		comboBox.setModel(new DefaultComboBoxModel(new String[] { "Birim", "AlÄ±ÅŸ", "SatÄ±ÅŸ", "ArtÄ±ÅŸ" ,"Tarih","Saat" }));
 		comboBox.setBounds(687, 279, 83, 22);
 		contentPane.add(comboBox);
 
@@ -310,9 +310,9 @@ public class arayuz extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		
-		//VERİ ÇEK
+		//VERÃ Ã‡EK
 
-		JButton btncek = new JButton("Veri Çek");
+		JButton btncek = new JButton("Veri Ã‡ek");
 		btncek.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
@@ -328,8 +328,8 @@ public class arayuz extends JFrame {
 		contentPane.add(btncek);
 		
 		
-		//DIŞARI AKTARMA
-		JButton btnCikti = new JButton("Dışarı Aktar");
+		//DIÃARI AKTARMA
+		JButton btnCikti = new JButton("DÃ½Ã¾arÃ½ Aktar");
 		
 		btnCikti.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -344,21 +344,21 @@ public class arayuz extends JFrame {
              FileWriter fw = new FileWriter(dosya.getAbsoluteFile());
              BufferedWriter bw = new BufferedWriter(fw);
              
-             //Satırların döngüsü
+             //SatÃ½rlarÃ½n dÃ¶ngÃ¼sÃ¼
              for(int i = 0; i < table.getRowCount(); i++){
-                 //Sütünların döngüsü
+                 //SÃ¼tÃ¼nlarÃ½n dÃ¶ngÃ¼sÃ¼
                  for(int j = 0; j < table.getColumnCount(); j++){
                      bw.write(table.getModel().getValueAt(i, j)+" ");
                  }
-                 //Başlangıç ve sonları için çizgi
+                 //BaÃ¾langÃ½Ã§ ve sonlarÃ½ iÃ§in Ã§izgi
                  
                  bw.write("\n_________\n");
              }
-             //BufferedWriter'ı kapatma
+             //BufferedWriter'Ã½ kapatma
              bw.close();
-             //FileWriter'ı kapatma
+             //FileWriter'Ã½ kapatma
              fw.close();
-             JOptionPane.showMessageDialog(null, "Çıktı alındı");
+             JOptionPane.showMessageDialog(null, "Ã‡Ã½ktÃ½ alÃ½ndÃ½");
              
              }catch(Exception ex){
                  ex.printStackTrace();
@@ -378,14 +378,14 @@ public class arayuz extends JFrame {
 		lblNewLabel.setBounds(669, 460, 153, 14);
 		contentPane.add(lblNewLabel);
 		
-		//Hakkında
+		//HakkÃ½nda
 		
-		JButton btnHakkinda = new JButton("Hakkında");
+		JButton btnHakkinda = new JButton("HakkÃ½nda");
 		
 		btnHakkinda.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-             JOptionPane.showMessageDialog(null, "Taha Tangülü 16260055\nŞerife Yeşildallar 16260105");
+             JOptionPane.showMessageDialog(null, "Taha TangÃ¼lÃ¼ 16260055\nÃerife YeÃ¾ildallar 16260105");
              
 
              
