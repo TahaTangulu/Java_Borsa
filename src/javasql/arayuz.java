@@ -31,7 +31,7 @@ public class arayuz extends JFrame {
 
 	DefaultTableModel model = new DefaultTableModel();
 
-	Object[] kolonlar = { "Birim", "Alýþ", "Satýþ", "Durum", "Tarih" ,"Saat"};
+	Object[] kolonlar = { "Birim", "Alış", "Satış", "Durum", "Tarih" ,"Saat"};
 	Object[] satirlar = new Object[6];
 	private JTextField txt_Birim;
 	private JTextField txt_Alis;
@@ -179,15 +179,15 @@ public class arayuz extends JFrame {
 		lblBirim.setBounds(484, 20, 56, 16);
 		contentPane.add(lblBirim);
 
-		JLabel lblSoyad = new JLabel("Alýþ");
+		JLabel lblSoyad = new JLabel("Alış");
 		lblSoyad.setBounds(484, 56, 56, 16);
 		contentPane.add(lblSoyad);
 
-		JLabel lblYas = new JLabel("Satýþ");
+		JLabel lblYas = new JLabel("Satış");
 		lblYas.setBounds(484, 91, 56, 16);
 		contentPane.add(lblYas);
 
-		JLabel lblNumara = new JLabel("Artýþ");
+		JLabel lblNumara = new JLabel("Artış");
 		lblNumara.setBounds(484, 126, 56, 16);
 		contentPane.add(lblNumara);
 		
@@ -310,7 +310,7 @@ public class arayuz extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		
-		//VERÝ ÇEK
+		//VERİ ÇEK
 
 		JButton btncek = new JButton("Veri Çek");
 		btncek.addActionListener(new ActionListener() {
@@ -328,8 +328,8 @@ public class arayuz extends JFrame {
 		contentPane.add(btncek);
 		
 		
-		//DIÞARI AKTARMA
-		JButton btnCikti = new JButton("Dýþarý Aktar");
+		//DIŞARI AKTARMA
+		JButton btnCikti = new JButton("Dışarı Aktar");
 		
 		btnCikti.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -344,21 +344,21 @@ public class arayuz extends JFrame {
              FileWriter fw = new FileWriter(dosya.getAbsoluteFile());
              BufferedWriter bw = new BufferedWriter(fw);
              
-             //Satýrlarýn döngüsü
+             //Satırların döngüsü
              for(int i = 0; i < table.getRowCount(); i++){
-                 //Sütünlarýn döngüsü
+                 //Sütunların döngüsü
                  for(int j = 0; j < table.getColumnCount(); j++){
                      bw.write(table.getModel().getValueAt(i, j)+" ");
                  }
-                 //Baþlangýç ve sonlarý için çizgi
+                 //Başlangıç ve sonları için çizgi
                  
                  bw.write("\n_________\n");
              }
-             //BufferedWriter'ý kapatma
+             //BufferedWriter'ı kapatma
              bw.close();
-             //FileWriter'ý kapatma
+             //FileWriter'ı kapatma
              fw.close();
-             JOptionPane.showMessageDialog(null, "Çýktý alýndý");
+             JOptionPane.showMessageDialog(null, "Çıktı Alındı");
              
              }catch(Exception ex){
                  ex.printStackTrace();
@@ -373,19 +373,19 @@ public class arayuz extends JFrame {
 		
 		
 		
-		JLabel lblNewLabel = new JLabel("Veri Taban\u0131 Sistemleri \r\nProje");
+		JLabel lblNewLabel = new JLabel("Veri Tabanı Sistemleri Proje");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 10));
 		lblNewLabel.setBounds(669, 460, 153, 14);
 		contentPane.add(lblNewLabel);
 		
-		//Hakkýnda
+		//Hakkında
 		
-		JButton btnHakkinda = new JButton("Hakkýnda");
+		JButton btnHakkinda = new JButton("Hakkında");
 		
 		btnHakkinda.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-             JOptionPane.showMessageDialog(null, "Taha Tangülü 16260055\nÞerife Yeþildallar 16260105");
+             JOptionPane.showMessageDialog(null, "Taha Tangülü 16260055\nŞerife Yeşildallar 16260105");
              
 
              
