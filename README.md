@@ -2,12 +2,11 @@
 ## Java Database kullanarak Borsa Uygulaması 
 
 Proje Konusu:
-Java ile istediğimiz siteden veri çekerek bunu veri tabanına kaydedebiliyoruz. Veri tabanına kaydettiğimiz verileri arayüz arayıcılığı ile görüntüleyebiliyoruz ve `INSERT INTO`
-`UPDATE` ve `DELETE` gibi sorgulamaları gerçekleştirebiliyoruz. Son olarak bu çektiğimiz verileri istersek .txt olarak çıktı alabiliyoruz.
+Java ile istediğimiz siteden veri çekerek bunu veri tabanına kaydedebiliyoruz. Veri tabanına kaydettiğimiz verileri arayüz arayıcılığı ile görüntüleyebiliyoruz ve `SELECT`, `INSERT`, `UPDATE` ve `DELETE` gibi sorgulamaları gerçekleştirebiliyoruz. Son olarak bu çektiğimiz verileri istersek .txt olarak çıktı alabiliyoruz.
 
 **Açıklamalar:**
 
-Projemizin çalışması için gerekli olan `MySQL JDBC connector` ve `jsoup` java kütüphanemize eklememiz gerekmetedir. library kısmında `mysql-connector-java-5.1.18-bin.jar` ve `jsoup-1.14.3.jar` adı altıdna bulunmaktadır.
+Projemizin çalışması için gerekli olan `MySQL JDBC connector` ve `jsoup` java kütüphanemize eklememiz gerekmektedir. library kısmında `mysql-connector-java-5.1.18-bin.jar` ve `jsoup-1.14.3.jar` adı altında bulunmaktadır.
 
 ## v1.2
 
@@ -65,7 +64,7 @@ Database Parola:
 String password = "Parola";
 ```
 
-Projemizin çalıştığında aldığımız çıktı:
+Projemiz arayüzünden bir görsel
 
 ![çıktı](Screenshot_4.png)
 > Projemizin son hali
