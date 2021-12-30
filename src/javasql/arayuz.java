@@ -253,7 +253,7 @@ public class arayuz extends JFrame {
 		contentPane.add(lblrenciAd);
 
 		JComboBox comboBox = new JComboBox();
-		comboBox.setModel(new DefaultComboBoxModel(new String[] { "Birim", "Alis", "Yaþ", "Artis" ,"Tarih","Saat" }));
+		comboBox.setModel(new DefaultComboBoxModel(new String[] { "Birim", "Alýþ", "Satýþ", "Artýþ" ,"Tarih","Saat" }));
 		comboBox.setBounds(687, 279, 83, 22);
 		contentPane.add(comboBox);
 
