@@ -1,21 +1,29 @@
 # **Veri Tabanı Sistemleri Proje**
-## Java ile SQL Sorgulama
+## Java Database kullanarak Borsa Uygulaması 
 
 Proje Konusu:
-Java ile sitelerden veri çekip (Selenium ya da Jsoup kullanmayı planlıyoruz). Bu verileri ise database'e kaydedip yine java ile istediğimiz sorgulamaları yapıp, yapılan sorgulamaları da .txt ya da excel dosyası olarak çıktılarını almak. Şuan için sadece database üzerinden sorgulamarı yapıp çıktı alınıyor. İlerleyen aşamalarda sitelerden veri çekmeyi de ekleyeceğiz.
+Java ile istediğimiz siteden veri çekerek bunu veri tabanına kaydedebiliyoruz. Veri tabanına kaydettiğimiz verileri arayüz arayıcılığı ile görüntüleyebiliyoruz ve `INSERT INTO`
+`UPDATE` ve `DELETE` gibi sorgulamaları gerçekleştirebiliyoruz. Son olarak bu çektiğimiz verileri istersek .txt olarak çıktı alabiliyoruz.
 
 **Açıklamalar:**
 
-Projemizin çalışması için gerekli olan `MySQL JDBC connector` ve `jsoup` java kütüphanemize eklememiz gerekmetedir. src kısmında `mysql-connector-java-5.1.18-bin.jar` ve `jsoup-1.14.3.jar` adı altıdna bulunmaktadır.
+Projemizin çalışması için gerekli olan `MySQL JDBC connector` ve `jsoup` java kütüphanemize eklememiz gerekmetedir. library kısmında `mysql-connector-java-5.1.18-bin.jar` ve `jsoup-1.14.3.jar` adı altıdna bulunmaktadır.
 
-## Yeni Güncelleme
+## v1.2 Last
+
+- Bir borsa sitesinden paranın Birimi, alışı, satışı, artışı, o an ki saatini ve tarihini çekebiliyoruz.
+- Verileri .txt olarak çıktı alabiliyoruz.
+- Hakkkında kısmı eklendi.
+
+
+## v1.1
 
 - Jsoup ile siteden veri çekme eklendi.
 
 - Gelecek güncellemede siteden çekilen veri arayüze de aktarılacak.
 
 
-## Eski Güncelleme
+## v1.0
 
 - Arayüz eklendi.
 - Arayüz üzerinden `SELECT`,`UPDATE`,`INSERT` ve `DELETE` gibi komutları yapabiliyoruz.
@@ -24,14 +32,24 @@ Projemizin çalışması için gerekli olan `MySQL JDBC connector` ve `jsoup` ja
 
 ## Bilgilendirme
 
-**Bağlantı İçin Gerekli importlar:**
+
+**Veri çekeceğimiz siteye bağlanmak için:**
+
 ```java
-import  java.sql.Connection;		
-import  java.sql.Statement;		
-import  java.sql.ResultSet;		
-import  java.sql.DriverManager;		
-import  java.sql.SQLException;
+Document doc = Jsoup.connect("site").get();
 ```
+
+**Veri çekilecek sitedeki birimlerin konumunu belirtmek için**
+
+```java
+Element baslikElementi = doc.select("konum").first();
+```
+> Örnek kullanım:
+
+```java
+Element baslikElementi = doc.select("div.-x0 > a").first();
+```
+İle div içindeki -x0'ın a kısmından Para biriminin ne olduğunu çekiyoruz.
 
 **Database bağlantısı için:**
 
@@ -47,19 +65,14 @@ Database Parola:
 ```java
 String password = "Parola";
 ```
-Çalıştırılacak sorgular için:
-```java
-String query = "select *  from tabloadı;";
-```
-> Bu kısımda istediğimiz tüm sorgulamaları yapabiliriz.
 
 Projemizin çalıştığında aldığımız çıktı:
 
-![çıktı](Screenshot_2.png)
-> Şuan için böyle ilerde geliştirilecek ve siteden veri çekme eklenecek.
+![çıktı](Screenshot_4.png)
+> Projemizin son hali
 
-![çıktı2](Screenshot_3.png)
-> Çekilen veri database kayıt çıktısı.
+![çıktı2](Screenshot_5.png)
+> Çekilen verilerden alınan .txt çıktısı
 
 
 
