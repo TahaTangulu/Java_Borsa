@@ -64,7 +64,7 @@ Database Parola:
 String password = "Parola";
 ```
 
-Projemizin çalıştığında aldığımız çıktı:
+Projemiz arayüzünden bir görsel
 
 ![çıktı](Screenshot_4.png)
 > Projemizin son hali
