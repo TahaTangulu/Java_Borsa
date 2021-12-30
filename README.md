@@ -9,7 +9,7 @@ Java ile istediğimiz siteden veri çekerek bunu veri tabanına kaydedebiliyoruz
 
 Projemizin çalışması için gerekli olan `MySQL JDBC connector` ve `jsoup` java kütüphanemize eklememiz gerekmetedir. library kısmında `mysql-connector-java-5.1.18-bin.jar` ve `jsoup-1.14.3.jar` adı altıdna bulunmaktadır.
 
-## v1.2 Last
+## v1.2
 
 - Bir borsa sitesinden paranın Birimi, alışı, satışı, artışı, o an ki saatini ve tarihini çekebiliyoruz.
 - Verileri .txt olarak çıktı alabiliyoruz.
