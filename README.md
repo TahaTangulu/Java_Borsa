@@ -2,8 +2,7 @@
 ## Java Database kullanarak Borsa Uygulaması 
 
 Proje Konusu:
-Java ile istediğimiz siteden veri çekerek bunu veri tabanına kaydedebiliyoruz. Veri tabanına kaydettiğimiz verileri arayüz arayıcılığı ile görüntüleyebiliyoruz ve `SELECT`,`INSERT`,
-`UPDATE` ve `DELETE` gibi sorgulamaları gerçekleştirebiliyoruz. Son olarak bu çektiğimiz verileri istersek .txt olarak çıktı alabiliyoruz.
+Java ile istediğimiz siteden veri çekerek bunu veri tabanına kaydedebiliyoruz. Veri tabanına kaydettiğimiz verileri arayüz arayıcılığı ile görüntüleyebiliyoruz ve `SELECT`, `INSERT`, `UPDATE` ve `DELETE` gibi sorgulamaları gerçekleştirebiliyoruz. Son olarak bu çektiğimiz verileri istersek .txt olarak çıktı alabiliyoruz.
 
 **Açıklamalar:**
 
