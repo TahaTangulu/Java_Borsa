@@ -1,34 +1,50 @@
 package javasql;
 
+import java.sql.ResultSet;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 public class vericekme {
 
-	
-	
-	public static void main(String[] args) {
+	static void vericek(String veriler) {
+
 		
-		String veriler;
 		try {
-		
-		Document doc = Jsoup.connect("https://dovizborsa.com/doviz/dolar").get();
-		Element baslikElementi =doc.select("div.-w0 > p").first(); //div içinde classifiedDetailTitle den h1 kýsmýný cek	
-		
-			String baslik = baslikElementi.text();	
-			String birim = doc.select("div.-w0 > h1").first().text();
-			String fiyat = doc.select("div.-w1 > span").first().text();
-			
-			veriler = "INSERT INTO ogrenci (Ad,Soyad,Yas,Numara) VALUES ("+"'" +baslik+ "','" + birim + "'," + "" + fiyat + "," + fiyat + ")"; 
-			// ilk veri tabaný üzerine kayýt deniyorum veri tabaný deðiþince deðiþecek
+			ResultSet myRs = baglanti.yap();
 
+			if (myRs.next()) {
 
-			System.out.println(veriler);
-			baglanti.ekle(veriler);
+				myRs.getString("Birim");
+				myRs.getString("Alis");	
+				myRs.getString("Satis");
+				myRs.getString("Artis");
+
+			}
+				LocalDate Tarih = LocalDate.now(); // Tarih
+		    	System.out.println(Tarih);
+
+		    	
+		        LocalTime Saat = LocalTime.now();
+		        System.out.println(Saat); // Saat
+		        
+				Document doc = Jsoup.connect("https://dovizborsa.com/doviz/dolar").get();
+				Element baslikElementi = doc.select("div.-x0 > a").first(); // div içindeki -x0'ýn a kýsmýndan veri çek
+																			
+				String birim = baslikElementi.text();
+				String alis = doc.select("div.-x1 > span").first().text(); // div içindeki -x1'in span kýsmýndan veri çek
+				String satis = doc.select("div.-x1 > span[class=-d3 _d3 _x19]").first().text(); // div içindeki -x1'in span kýsmýndaki "-d3 _d3 _x19" classýndan  veri çek 
+				String artis = doc.select("div.-x0 > i[class=-s2 -d9 _d9 __cu]").first().text(); // div içindeki -x0'in i kýsmýndaki "-s2 -d9 _d9 __cu" classýndan  veri çek
+				veriler = "INSERT INTO borsa (Birim,Alis,Satis,Artis,Tarih,Saat) VALUES (" + "'" + birim + "','" + alis + "','" + satis + "','" + artis + "','" + Tarih + "','"+ Saat + "')";
+
+				// veriler = "INSERT INTO borsa (Birim,Alis,Satis,Artis,Tarih,Saat) VALUES (1154580,1154580,1154580,1154580,6546544,4154654)";
+
+				System.out.println(veriler);
+				baglanti.ekle(veriler);
 			
-			
-		}catch(Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}

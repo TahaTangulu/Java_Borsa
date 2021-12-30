@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.PreparedStatement;
 import com.mysql.jdbc.Statement;
 
 
@@ -13,13 +14,14 @@ public class baglanti {
 	
 	static Connection myConn;
 	static Statement myStat;
+	static PreparedStatement pS;
 	
 	static ResultSet yap() {
 		ResultSet myRs = null;
 		try {			
-			myConn = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/javasql","root","");
+			myConn = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/javasql","root","");
 			myStat = (Statement) myConn.createStatement();
-			myRs = myStat.executeQuery("select * from ogrenci");
+			myRs = myStat.executeQuery("select * from borsa");
 			
 			
 		} catch (Exception e) {
