@@ -31,7 +31,7 @@ public class arayuz extends JFrame {
 
 	DefaultTableModel model = new DefaultTableModel();
 
-	Object[] kolonlar = { "Birim", "Alýþ", "Satýþ", "Durum", "Tarih" ,"Saat"};
+	Object[] kolonlar = { "Birim", "AlÄ±ÅŸ", "SatÄ±ÅŸ", "Durum", "Tarih" ,"Saat"};
 	Object[] satirlar = new Object[6];
 	private JTextField txt_Birim;
 	private JTextField txt_Alis;
@@ -179,15 +179,15 @@ public class arayuz extends JFrame {
 		lblBirim.setBounds(484, 20, 56, 16);
 		contentPane.add(lblBirim);
 
-		JLabel lblSoyad = new JLabel("Alýþ");
+		JLabel lblSoyad = new JLabel("AlÄ±ÅŸ");
 		lblSoyad.setBounds(484, 56, 56, 16);
 		contentPane.add(lblSoyad);
 
-		JLabel lblYas = new JLabel("Satýþ");
+		JLabel lblYas = new JLabel("SatÄ±ÅŸ");
 		lblYas.setBounds(484, 91, 56, 16);
 		contentPane.add(lblYas);
 
-		JLabel lblNumara = new JLabel("Artýþ");
+		JLabel lblNumara = new JLabel("ArtÄ±ÅŸ");
 		lblNumara.setBounds(484, 126, 56, 16);
 		contentPane.add(lblNumara);
 		
@@ -199,7 +199,7 @@ public class arayuz extends JFrame {
 		lblSaat.setBounds(484, 192, 46, 14);
 		contentPane.add(lblSaat);
 
-		JButton btnUpdate = new JButton("Güncelle");
+		JButton btnUpdate = new JButton("GÃ¼ncelle");
 		btnUpdate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
@@ -253,7 +253,7 @@ public class arayuz extends JFrame {
 		contentPane.add(lblrenciAd);
 
 		JComboBox comboBox = new JComboBox();
-		comboBox.setModel(new DefaultComboBoxModel(new String[] { "Birim", "Alýþ", "Satýþ", "Artýþ" ,"Tarih","Saat" }));
+		comboBox.setModel(new DefaultComboBoxModel(new String[] { "Birim", "AlÄ±ÅŸ", "SatÄ±ÅŸ", "ArtÄ±ÅŸ" ,"Tarih","Saat" }));
 		comboBox.setBounds(687, 279, 83, 22);
 		contentPane.add(comboBox);
 
@@ -310,9 +310,9 @@ public class arayuz extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		
-		//VERÝ ÇEK
+		//VERÄ° Ã‡EK
 
-		JButton btncek = new JButton("Veri Çek");
+		JButton btncek = new JButton("Veri Ã‡ek");
 		btncek.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
@@ -328,8 +328,8 @@ public class arayuz extends JFrame {
 		contentPane.add(btncek);
 		
 		
-		//DIÞARI AKTARMA
-		JButton btnCikti = new JButton("Dýþarý Aktar");
+		//DIÅžARI AKTARMA
+		JButton btnCikti = new JButton("DÄ±ÅŸarÄ± Aktar");
 		
 		btnCikti.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -344,21 +344,21 @@ public class arayuz extends JFrame {
              FileWriter fw = new FileWriter(dosya.getAbsoluteFile());
              BufferedWriter bw = new BufferedWriter(fw);
              
-             //Satýrlarýn döngüsü
+             //SatÄ±rlarÄ±n dÃ¶ngÃ¼sÃ¼
              for(int i = 0; i < table.getRowCount(); i++){
-                 //Sütünlarýn döngüsü
+                 //SÃ¼tunlarÄ±n dÃ¶ngÃ¼sÃ¼
                  for(int j = 0; j < table.getColumnCount(); j++){
                      bw.write(table.getModel().getValueAt(i, j)+" ");
                  }
-                 //Baþlangýç ve sonlarý için çizgi
+                 //BaÅŸlangÄ±Ã§ ve sonlarÄ± iÃ§in Ã§izgi
                  
                  bw.write("\n_________\n");
              }
-             //BufferedWriter'ý kapatma
+             //BufferedWriter'Ä± kapatma
              bw.close();
-             //FileWriter'ý kapatma
+             //FileWriter'Ä± kapatma
              fw.close();
-             JOptionPane.showMessageDialog(null, "Çýktý alýndý");
+             JOptionPane.showMessageDialog(null, "Ã‡Ä±ktÄ± AlÄ±ndÄ±");
              
              }catch(Exception ex){
                  ex.printStackTrace();
@@ -373,19 +373,19 @@ public class arayuz extends JFrame {
 		
 		
 		
-		JLabel lblNewLabel = new JLabel("Veri Taban\u0131 Sistemleri \r\nProje");
+		JLabel lblNewLabel = new JLabel("Veri TabanÄ± Sistemleri Proje");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 10));
 		lblNewLabel.setBounds(669, 460, 153, 14);
 		contentPane.add(lblNewLabel);
 		
-		//Hakkýnda
+		//HakkÄ±nda
 		
-		JButton btnHakkinda = new JButton("Hakkýnda");
+		JButton btnHakkinda = new JButton("HakkÄ±nda");
 		
 		btnHakkinda.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-             JOptionPane.showMessageDialog(null, "Taha Tangülü 16260055\nÞerife Yeþildallar 16260105");
+             JOptionPane.showMessageDialog(null, "Taha TangÃ¼lÃ¼ 16260055\nÅžerife YeÅŸildallar 16260105");
              
 
              
