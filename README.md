@@ -7,7 +7,7 @@ Java ile istediğimiz siteden veri çekerek bunu veri tabanına kaydedebiliyoruz
 
 **Açıklamalar:**
 
-Projemizin çalışması için gerekli olan `MySQL JDBC connector` ve `jsoup` java kütüphanemize eklememiz gerekmetedir. library kısmında `mysql-connector-java-5.1.18-bin.jar` ve `jsoup-1.14.3.jar` adı altıdna bulunmaktadır.
+Projemizin çalışması için gerekli olan `MySQL JDBC connector` ve `jsoup` java kütüphanemize eklememiz gerekmektedir. library kısmında `mysql-connector-java-5.1.18-bin.jar` ve `jsoup-1.14.3.jar` adı altında bulunmaktadır.
 
 ## v1.2
 
