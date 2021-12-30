@@ -44,12 +44,11 @@ Document doc = Jsoup.connect("site").get();
 ```java
 Element baslikElementi = doc.select("konum").first();
 ```
-> Örnek kullanım:
+> Örnek kullanım: Bu şekilde div içindeki -x0'ın a kısmından Para biriminin ne olduğunu çekiyoruz.
 
 ```java
 Element baslikElementi = doc.select("div.-x0 > a").first();
 ```
-İle div içindeki -x0'ın a kısmından Para biriminin ne olduğunu çekiyoruz.
 
 **Database bağlantısı için:**
 
