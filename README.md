@@ -1,4 +1,4 @@
-# **Veri Tabanı Sistemleri Proje**
+# **Borsa Uygulaması**
 ## Java Database kullanarak Borsa Uygulaması 
 
 Proje Konusu:
